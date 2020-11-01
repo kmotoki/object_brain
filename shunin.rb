@@ -7,7 +7,11 @@ class Shunin < Shain
 		'主任が素早く立ちました。'
 	end
 
-	def calculate_salary(kihonkyu)
-		kihonkyu * 2 + 1
+	def kihon
+		@kihonkyu * 2
+	end
+
+	def teate
+		1
 	end
 end

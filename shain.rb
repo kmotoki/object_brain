@@ -1,11 +1,16 @@
 # -*- coding: utf-8 -*-
-# Shain class for lesson 3.4
+
+require_relative 'salary'
+
+# Shain class for lesson 3.8
 class Shain
-	def standup
-		'社員はとりあえず起立する。'
+	include Salary
+
+	def initialize(kihonkyu)
+		@kihonkyu = kihonkyu
 	end
 
-	def calculate_salary(kihonkyu)
-		# 給料計算の処理を入れる
+	def standup
+		'社員はとりあえず起立する。'
 	end
 end

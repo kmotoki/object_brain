@@ -7,7 +7,7 @@ class Bucho < Shain
 		'部長がだるそうに立ちました。'
 	end
 
-	def calculate_salary(kihonkyu)
-		kihonkyu * 3
+	def kihon
+		@kihonkyu * 3
 	end
 end
