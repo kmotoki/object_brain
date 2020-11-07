@@ -2,8 +2,9 @@
 require_relative 'shain'
 
 shain = Shain.new
-puts shain.work
-shain.gyoumu = TantoGyoumu.new
-puts shain.work
-shain.gyoumu = ShuninGyoumu.new
-puts shain.work
+shain.yakushoku = Tanto.new
+puts "担当の給料は#{shain.calculate_salary(100)}です。"
+shain.up
+puts "昇進して主任になると給料は#{shain.calculate_salary(100)}です。"
+shain.down
+puts "降格してしまうと給料は#{shain.calculate_salary(100)}です。"
