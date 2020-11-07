@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-require_relative 'shain_factory'
+require_relative 'shain'
 
-shain_factory = ShainFactory.new
-['Tanto', 'Shunin', 'Bucho', 'Torishimariyaku'].each do |yakushoku|
-	shain = shain_factory.create(yakushoku, 100)
-	puts shain.standup
-	puts "私の給料は#{shain.calculate_salary}円です。"
-end
+shain = Shain.new
+puts shain.work
+shain.gyoumu = TantoGyoumu.new
+puts shain.work
+shain.gyoumu = ShuninGyoumu.new
+puts shain.work
