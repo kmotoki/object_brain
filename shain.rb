@@ -1,24 +1,31 @@
 # -*- coding: utf-8 -*-
-
-require_relative 'yakushoku'
-
-# Shain class for lesson 4.3
 class Shain
-	attr_accessor :yakushoku
-
-	def initialize
-		@yakushoku = Yakushoku.new
+	def initialize(kihonkyu)
+		@kihonkyu = kihonkyu
 	end
 
-	def calculate_salary(kihonkyu)
-		@yakushoku.calculate_salary(kihonkyu)
+	def print_salary
+		puts "私の給料は#{calc_salary}です。"
 	end
 
-	def up
-		@yakushoku = @yakushoku.up
+	def calc_salary
 	end
+end
 
-	def down
-		@yakushoku = @yakushoku.down
+class Tanto < Shain
+	def calc_salary
+		@kihonkyu
+	end
+end
+
+class Shunin < Shain
+	def calc_salary
+		@kihonkyu * 2 + 1
+	end
+end
+
+class Bucho < Shain
+	def calc_salary
+		@kihonkyu * 3
 	end
 end
